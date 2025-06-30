@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - [Agency Name]</title>
+    <style>
+        /* Your existing CSS for contact.html goes here */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #1abc9c;
+        }
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 3em;
+            margin-bottom: 30px;
+            padding-top: 20px;
+        }
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .contact-form, .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        .contact-form h2, .contact-info h2 {
+            color: #3498db;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .cta-button {
+            background-color: #1abc9c;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            width: auto;
+            display: inline-block;
+        }
+        .cta-button[type="submit"] {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .cta-button:hover {
+            background-color: #16a085;
+            transform: translateY(-2px);
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 1.05em;
+        }
+        .contact-info p strong {
+            color: #333;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+        footer .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .container {
+                width: 95%;
+            }
+            .contact-content {
+                flex-direction: column;
+            }
+            .contact-form, .contact-info {
+                min-width: unset;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>Digital Corsel</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h1>Connect With Our Digital Experts</h1>
+        <div class="contact-content">
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contact-form"> 
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number (Optional):</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit" class="cta-button" id="form-submit-button">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h2>Our Contact Details</h2>
+                <p><strong>Address:</strong><br>
+                   123 Digital Drive, Tech City,<br>
+                   Bengaluru, Karnataka 560001, India</p>
+                <p><strong>Phone:</strong><br>
+                   <a href="tel:+919876543210" id="phone-link-cta">+91 98765 43210</a></p>
+                <p><strong>Email:</strong><br>
+                   <a href="mailto:info@youragency.com" id="email-link-cta">info@youragency.com</a></p>
+                <p><strong>Business Hours:</strong><br>
+                   Mon - Fri: 9:00 AM - 6:00 PM IST</p>
+                <!-- <p style="margin-top: 30px;">
+                    <a href="contact.html" class="cta-button" id="contact-page-bottom-cta">Request a Call Back</a>
+                </p> -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [Agency Name]. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a> |
+            <a href="#" aria-label="Twitter">TW</a> |
+            <a href="#" aria-label="LinkedIn">IN</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // In a real application, you would send this form data to a server here using fetch() or XMLHttpRequest.
+            // For this static site, we'll just simulate success and redirect.
+
+            // Optional: You can add a small delay to simulate processing if desired
+            // setTimeout(function() {
+                window.location.href = 'thankyou.html'; // Redirect to the thank you page
+            // }, 500); // 500 milliseconds delay
+        });
+    </script>
+</body>
+</html>
