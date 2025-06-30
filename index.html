@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Digital Marketing Partner - [Agency Name]</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #1abc9c;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1500x700/3498db/ffffff?text=Grow+Your+Business+Online') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+        .hero p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            background-color: #1abc9c;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #16a085;
+            transform: translateY(-2px);
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background-color: #1abc9c;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .services-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .service-card {
+            padding: 25px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fdfdfd;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .service-card h3 {
+            color: #3498db;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+        .testimonials {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .testimonial-card {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-style: italic;
+            text-align: center;
+        }
+        .testimonial-card p {
+            margin-bottom: 15px;
+        }
+        .testimonial-card span {
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+            margin-top: 10px;
+        }
+        .lead-magnet {
+            background-color: #3498db;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .lead-magnet h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .lead-magnet p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .download-button {
+            background-color: #1abc9c;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block; /* For the anchor tag */
+        }
+        .download-button:hover {
+            background-color: #16a085;
+            transform: translateY(-2px);
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+        footer .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.1em;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .container {
+                width: 95%;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            .services-overview {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>Digital Corsel</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Unlocking Digital Potential for Your Business</h1>
+        <p>We craft data-driven strategies to amplify your online presence and drive measurable results.</p>
+        <a href="contact.html" class="cta-button" id="Consultation-button">Get a Free Consultation</a>
+    </section>
+
+    <section class="container">
+        <h2>Our Core Digital Marketing Services</h2>
+        <div class="services-overview">
+            <div class="service-card">
+                <h3>Search Engine Optimization (SEO)</h3>
+                <p>Improve your visibility on search engines and attract organic traffic.</p>
+                <a href="services.html#seo" class="cta-button service-learn-more-btn" data-service="seo">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>Pay-Per-Click (PPC) Advertising</h3>
+                <p>Maximize your ROI with targeted ad campaigns on Google, social media, and more.</p>
+                <a href="services.html#ppc" class="cta-button service-learn-more-btn" data-service="ppc">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>Social Media Marketing</h3>
+                <p>Build a strong brand presence and engage with your audience across platforms.</p>
+                <a href="services.html#social" class="cta-button service-learn-more-btn" data-service="social">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>Content Marketing</h3>
+                <p>Create compelling content that attracts, engages, and converts your target audience.</p>
+                <a href="services.html#content" class="cta-button service-learn-more-btn" data-service="content">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-card">
+            <p>"[Agency Name] transformed our online presence. Their SEO expertise is unmatched!"</p>
+            <span>- John Doe, CEO of Tech Innovations</span>
+        </div>
+        <div class="testimonial-card">
+            <p>"Outstanding results from their PPC campaigns. We saw a significant increase in leads."</p>
+            <span>- Jane Smith, Marketing Manager at Urban Living</span>
+        </div>
+    </section>
+
+    <section class="lead-magnet">
+        <h3>Unlock Your Digital Marketing Potential</h3>
+        <p>Download our comprehensive guide to mastering digital marketing strategies for your business.</p>
+        <a href="https://thethinkingteam.in/wp-content/uploads/2024/03/Digital-Marketing-Brochure.pdf" download class="download-button" id="brochure-download" data-download-type="brochure">Download Our Free Guide</a>
+    </section>
+
+    <section class="container">
+        <h2>Ready to Grow?</h2>
+        <p style="text-align: center; font-size: 1.2em; max-width: 700px; margin: 0 auto 30px;">Let's discuss how our tailored digital marketing solutions can help you achieve your business goals.</p>
+        <div style="text-align: center;">
+            <a href="contact.html" class="cta-button" id="contact-button">Contact Our Experts Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [Agency Name]. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a> |
+            <a href="#" aria-label="Twitter">TW</a> |
+            <a href="#" aria-label="LinkedIn">IN</a>
+        </div>
+    </footer>
+</body>
+</html>
